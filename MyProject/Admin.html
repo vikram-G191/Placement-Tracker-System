@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="Admin.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+
+
+
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li  class="">
+                <a href="dashbords.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span onclick="updateApplicationStatus()">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="jobapplicationform.html">
+                    <i class="fas fa-user-alt"></i>
+                    <span>Student</span>
+                </a>
+            </li>
+            <li>
+                <a href="Admin.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Admin</span>
+                </a>
+             </li>
+             <li id="resulticon">
+                <a href="Result.html">
+                  <i class="fas fa-trophy"></i>
+                  <span>Result</span>
+                </a>
+              </li>   
+        </ul>
+    </div>
+        <!-- <div class="tabular--wrapper"> -->
+          <div class="table-container">
+              <h3 class="main--title">Placement Data</h3>
+                <table id="applicationsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll Number</th>
+                            <th>Company Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                        <tbody id="applicationsBody">
+                           
+                        </tbody>
+                        
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div>
+    <h2>Selected Students</h2>
+<table id="selectedStudentsTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Company Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="selectedStudentsBody">
+  </tbody>
+</table>
+
+<h2>Not Selected Students</h2>
+<table id="notSelectedStudentsTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Company Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="notSelectedStudentsBody">
+  </tbody>
+</table>
+</div> -->
+
+
+    <!-- <input type="button" value="refresh" onclick="updateApplicationStatus()"> -->
+    <script
+      src="https://kit.fontawesome.com/c6910a93fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Placement.js"></script>
+</body>
+</html>

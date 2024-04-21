@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="jobapplicationform.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li  class="">
+                <a href="dashbords.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span onclick="updateApplicationStatus()">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="jobapplicationform.html">
+                    <i class="fas fa-user-alt"></i>
+                    <span>Student</span>
+                </a>
+            </li>
+            <li>
+                <a href="Admin.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Admin</span>
+                </a>
+            </li>
+            <li id="resulticon">
+              <a href="Result.html">
+                <i class="fas fa-trophy"></i>
+                <span>Result</span>
+              </a>
+            </li>
+        </ul>
+    </div>
+  <div class="container">
+    <h2>Job Application Form</h2>
+    <form action="" id="jobApplicationForm">  
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required >
+      </div>
+      <div class="form-group">
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollno" required>
+      </div>
+    <!-- <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <select id="companyName" name="company">
+            <option value="Select Company" read-only >Select Company</option>
+            <option value="TCS">TCS</option>
+            <option value="WIPRO">WIPRO</option>
+            <option value="INFOSYS">INFOSYS</option>
+            <option value="COGNIZANT">COGNIZANT</option>
+            <option value="CAPGEMINI">CAPGEMINI</option>
+            <option value="TECH MAHINDRA">TECH MAHINDRA</option>
+            <option value="Other" onclick="input()">Others</option>
+          </select>
+        </div>
+        <input type="text" id="otherCompanyName" style="display:none;" placeholder="Enter Company Name" required> -->
+        <div class="form-group">
+          <label for="companyName">Company Name:</label>
+          <select id="companyName" name="company" onchange="handleCompanySelection(this)">
+              <option value="SelectCompany">- Select Company -</option>
+              <option value="TCS">TCS</option>
+              <option value="WIPRO">WIPRO</option>
+              <option value="INFOSYS">INFOSYS</option>
+              <option value="COGNIZANT">COGNIZANT</option>
+              <option value="CAPGEMINI">CAPGEMINI</option>
+              <option value="TECH MAHINDRA">TECH MAHINDRA</option>
+              <option value="Other">--OTHRES--</option>
+          </select>
+      </div>
+      <div id="otherCompanyNameContainer" style="display: none;">
+          <label for="otherCompanyName">Enter Company Name:</label>
+          <input type="text" id="otherCompanyName" name="othercompany" required>
+      </div>
+      
+      </form>
+      <button type="submit" onclick="submitApplication()">Submit Application</button>
+  </div>
+</div>
+<script
+      src="https://kit.fontawesome.com/c6910a93fd.js"
+      crossorigin="anonymous"
+    ></script>
+<script src="./Placement.js"></script>
+</body>
+</html>

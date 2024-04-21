@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard design</title>
+    <link rel="stylesheet" href="dashbords.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/ css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo"></div>
+      <ul class="menu">
+        <li class="">
+          <a href="#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span onclick="updateApplicationStatus()">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="jobapplicationform.html">
+            <i class="fas fa-user-alt"></i>
+            <span>Student</span>
+          </a>
+        </li>
+        <li>
+          <a href="Admin.html">
+            <i class="fas fa-chart-bar"></i>
+            <span>Admin</span>
+          </a>
+        </li>
+        <li id="resulticon">
+          <a href="Result.html">
+            <i class="fas fa-trophy"></i>
+            <span>Result</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main--content">
+      <div class="header--wrapper">
+        <div class="header--title">
+          <!-- <span>Primary</span> -->
+          <h2 id="head--2">Placement Tracking Dashboard</h2>
+          <!-- <img src="Placement tracking dashboard.jpg" alt=""> -->
+        </div>
+        <div class="user--info">
+          <!-- <div class="search--box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="search" />
+          </div> -->
+          <!-- <img src="pexels-владимир-васильев-11035169.jpg" alt="" /> -->
+        </div>
+      </div>
+
+      <div class="card--container">
+        <h3 class="main--title" id="tdata">Today's Data</h3>
+        <div class="card--wrapper">
+          <div class="payment--card light-purple">
+            <h3 class="main--title">Job Applications</h3>
+            <div class="card--header">
+              <div class="amount">
+                <span class="amount--value"> Number of Applictions </span>
+              </div>
+              <i class="fas fa-thumbs-up icon dark-purple"></i>
+            </div>
+            <span class="card-detail" id="numberOfApplications">0</span>
+          </div>
+
+          <div class="payment--card light-green">
+            <h3 class="main--title">Selected Students</h3>
+            <div class="card--header">
+              <div class="amount">
+                <span class="amount--value"> Number of Selected Students </span>
+              </div>
+              <i class="fas fa-check-square icon dark-green"></i>
+            </div>
+            <span class="card-detail" id="numberOfSelectedStudents">0</span>
+          </div>
+
+          <div class="payment--card light-red">
+            <h3 class="main--title">Not Selected Students</h3>
+            <div class="card--header">
+              <div class="amount">
+                <span class="amount--value">Number of  Not Selected Students </span>
+              </div>
+              <i class="fas fa-times-circle icon dark-red"></i>
+            </div>
+            <span class="card-detail" id="numberOfNotSelectedStudents">0</span>
+          </div>
+        </div>
+        <div id="dashbtn"><span id="spanbtn">Click Here To See Your Result   <i class="fas fa-hand-point-right fa-2x"></i> </span>
+        <input type="button" class="btn bg-primary" id="dbtn" value="refresh" onclick="updateApplicationStatus()">
+      </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/c6910a93fd.js"
+      crossorigin="anonymous"
+    ></script>
+<script src="Placement.js"></script>
+
+  </body>
+</html>
